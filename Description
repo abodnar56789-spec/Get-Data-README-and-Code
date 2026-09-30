@@ -1,0 +1,84 @@
+Operator Training and assessment Panel
+
+Project Description:
+
+This project is an Arduino-based training and assessment panel for machine operators.
+
+The operator first selects Task 1, Task 2, or Task 3. Each task has its own correct sequence of six button presses.
+
+The system checks whether the entered sequence is correct.
+
+Features used:
+
+- 6 physical buttons
+- 6 blue LEDs
+- Green LED for a correct sequence
+- Red LED for an incorrect sequence
+- OLED display
+- Three different training tasks
+- Mistake counter
+- Displays which steps were incorrect
+- Identifies which step needs the most practice
+- Locks the assessment after three unsuccessful attempts
+
+Correct Sequences:
+
+Task 1:
+`6, 5, 4, 4, 2, 3`
+
+Task 2:
+`6, 5, 3, 3, 3, 6`
+
+Task 3:
+`6, 5, 2, 2, 1, 1`
+
+ Set up:
+
+- Arduino Nano
+- 6 push buttons
+- 6 blue LEDs
+- 1 green LED
+- 1 red LED
+- SSD1306 OLED display
+- Resistors
+- Breadboard and jumper wires
+
+How It Works:
+
+1. The operator selects Task 1, Task 2, or Task 3.
+2. The operator enters a sequence using the six buttons.
+3. Arduino compares the entered sequence with the correct sequence for the selected task.
+4. If the sequence is correct, the green LED turns on and the screen displays `GOOD JOB`.
+5. If the sequence is incorrect, the red LED turns on.
+6. The screen displays the incorrect steps.
+7. The system records which steps are repeatedly incorrect.
+8. The step with the highest number of mistakes is displayed as needing more practice.
+9. After three unsuccessful attempts, the assessment is locked.
+
+
+The project was programmed using Arduino IDE.
+
+Library used:
+
+`U8g2lib`
+
+AI Use:
+
+ChatGPT was used to support Arduino code development, debugging, integration of different code sections, and explanation of the code.
+
+The prompts used are:
+"I have this code for the buttons and this code for the display. Can you help me combine them into one code?"
+"I want Arduino to count how many mistakes the operator makes."
+"I want the operator to choose Task 1, Task 2 or Task 3 first, and then Arduino should only check the correct sequence for that task."
+
+Additionally to that I have used two examples found on the internet. First one is the tutorial explaining how to connect the button to the LED and having them perform a correct sequence where at the end if the sequence pressed is correct the green LED lights up and if it is wrong then the red LED lights up:
+
+https://www.hackster.io/highvoltages/push-button-combination-lock-using-arduino-986a69. 
+
+This tutorial also provided the code that I later combined, with the help of ChatGPT and the prompts listed above, with another code from an online tutorial for displaying text on the screen. The code for the sequence tutorial can be found under:
+
+https://github.com/HighVoltages/Arduino-Push-Button-Combination-Lock/blob/master/arduino_code/arduino_code.ino 
+
+The second code is taken from the tutorial where the OLED display is connected. The link is shown below:
+
+https://home.et.utwente.nl/slootenvanf/2019/11/15/use-oled-display-with-arduino/
