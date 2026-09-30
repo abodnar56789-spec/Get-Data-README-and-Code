@@ -229,7 +229,7 @@ void checkEntered6(int button){
     compareCode(); //Starts checking whether the entered sequence is correct
   }
 }
-//line 132 untill 194 that use checkEntered() receives whciver button was pressed. 
+//line 132 untill 194 that use checkEntered() receives whichever button was pressed. 
 //For example checkEntered(5), measn inside the function button=5 and the digitalWrite(LED[button-1],HIGH) turns the corresponding 4th blue LED
 void compareCode() {//Function that compares what the operator entered with the allowed/valid sequences
 
